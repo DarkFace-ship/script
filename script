@@ -1,0 +1,29 @@
+local frame = Instance.new("ScreenGui")
+local textFrame = Instance.new("TextLabel")
+local button = Instance.new("TextButton")
+
+local plr = game.Players.LocalPlayer
+
+frame.Parent = plr.PlayerGui
+textFrame.Parent = frame
+button.Parent = frame
+
+textFrame.Size = UDim2.new(0, 1526,0, 625)
+textFrame.Position = UDim2.new(0.021, 0,0.053, 0)
+
+button.Size = UDim2.new(0, 381,0, 113)
+button.Position = UDim2.new(0.38, 0,0.762, 0)
+button.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.TextScaled = true
+
+button.Text = "УБРАТЬ"
+
+textFrame.Text = "ЭМИЛЬ ГЕЙ"
+
+textFrame.TextScaled = true
+textFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+
+button.MouseButton1Click:Connect(function()
+	frame:Destroy()
+end)
